@@ -1,0 +1,132 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+html, body {
+    margin: 0;
+}
+body {
+    font-family: 'Roboto';
+    background-color: rgb(248, 244, 244);
+}
+img#logo {
+    width: 150px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+header p {
+    font-size: 14px;
+}
+header, main, footer {
+    text-align: center;
+}
+header button {
+    margin-top: 16px;
+    padding: 8px 16px;
+    border-radius: 4px;
+    background-color: #ff4f4f;
+    color: white;
+    font-weight: bold;
+    border: none;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+footer {
+    margin-top: auto;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    border-top: 1px rgb(219, 217, 217) solid;
+}
+h1, h2 {
+    color: rgba(0, 0, 0, 0.87);
+}
+main section.donors {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+main h2 span {
+    color: #ff4f4f;
+}
+section.form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #ff4f4f;
+    padding: 16px 64px;
+    align-items: center;
+    border-radius: 8px;
+}
+section.form h2 {
+    text-align: right;
+    margin-right: 45px;
+    color: white;
+    font-size: 20px;
+}
+section.form button {
+    font-family: 'Roboto';
+    color: rgba(0, 0, 0, 0.932);
+}
+form input, form button {
+    width: 100%;
+    margin-bottom: 4px;
+    padding: 8px 16px; /* ENCIMA E EMBAIXO - NAS LATERAIS */    
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.719);
+}
+form input {
+    background-color: transparent;
+}
+form input::placeholder {
+    color: rgba(255, 255, 255, 0.849);
+}
+form button {
+    font-weight: bold;
+    border: 1px solid rgba(153, 150, 150, 0.774);
+}
+header, section.form, main {
+    margin: 0 auto 70px auto;
+    width: 90%;
+    max-width: 500px;
+}
+header h1, main h2 {
+    margin-bottom: 70px;
+}
+.blood {
+    color: #ff4f4f;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.blood::before {
+    content: '';
+    background-color: #ff4f4f27;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: -10px;
+    border-radius: 50%;
+    border-top-right-radius: 0;
+    transform: rotate(-45deg);
+}
+section.donor p {
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+
+section.form {
+    transition: all 300ms;
+}
+section.form.hide {
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    margin-top: -70px;
+}
